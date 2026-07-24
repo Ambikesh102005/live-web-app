@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Live Web App 🚀</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Ready for Deployment!</h1>
+        <p>यह नया प्रोजेक्ट प्रोडक्शन और ऑटो-डिप्लॉयमेंट के लिए पूरी तरह तैयार है।</p>
+        
+        <div class="status-box">
+            <span>सर्वर स्टेटस:</span>
+            <strong id="serverStatus">चेक हो रहा है...</strong>
+        </div>
+
+        <button id="checkBtn">सर्वर से कनेक्ट करें</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
