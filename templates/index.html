@@ -60,26 +60,27 @@
             </div>
         </section>
 
-        <!-- Direct Email Contact Form -->
+                <!-- Direct Email Contact Form -->
         <section class="card card-fx">
             <h2><i class="fa-solid fa-paper-plane"></i> Get in Touch</h2>
             <p class="form-subtext">Directly sends to: <b>shuklaambikesh45@gmail.com</b></p>
             
-            <form action="https://formspree.io/f/xanyqpyo" method="POST">
+            <!-- FormSubmit Service Integration -->
+            <form action="https://formsubmit.co/shuklaambikesh45@gmail.com" method="POST">
                 <div class="input-group">
                     <input type="text" name="name" placeholder="आपका नाम" required>
                 </div>
                 <div class="input-group">
-                    <input type="email" name="_replyto" placeholder="आपका ईमेल" required>
+                    <input type="email" name="email" placeholder="आपका ईमेल" required>
                 </div>
                 <div class="input-group">
                     <textarea name="message" rows="4" placeholder="आपका मैसेज यहाँ लिखें..." required></textarea>
                 </div>
-                <input type="hidden" name="_to" value="shuklaambikesh45@gmail.com">
+                
+                <!-- Extra settings for smooth submit -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
                 <button type="submit" class="submit-btn">संदेश भेजें 🚀</button>
             </form>
         </section>
-    </div>
-
-</body>
-</html>
