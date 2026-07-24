@@ -3,67 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio 🚀</title>
+    <title>Ambikesh Shukla | Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="glow-bg"></div>
+
     <div class="container">
-        <!-- Hero Section -->
-        <header class="hero">
-            <div class="profile-img">👨‍💻</div>
-            <h1>Ambikesh</h1>
-            <p class="subtitle">Full-Stack Web Developer & Tech Explorer</p>
-            <div class="status-badge">🟢 Available for Projects</div>
+        <!-- Hero Header -->
+        <header class="hero card-fx">
+            <div class="avatar-icon">
+                <i class="fa-solid fa-terminal"></i>
+            </div>
+            <h1>Ambikesh Shukla</h1>
+            <p class="subtitle">Tech Explorer & Developer</p>
+            <div class="status-badge">
+                <span class="pulse-dot"></span> Available for Projects
+            </div>
+            <p class="ai-tag"><i class="fa-solid fa-robot"></i> Building & Learning with AI</p>
         </header>
 
-        <!-- Tech Stack -->
-        <section class="card">
-            <h2><i class="fa-solid fa-code"></i> My Tech Stack</h2>
+        <!-- Tech Stack & Skills -->
+        <section class="card card-fx">
+            <h2><i class="fa-solid fa-code"></i> Tech Stack & Skills</h2>
             <div class="skills-grid">
-                <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
-                <span class="skill-tag"><i class="fa-solid fa-flask"></i> Flask</span>
-                <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
-                <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-                <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-                <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Kali Linux</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C / C++</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Cyber Security</span>
+                <span class="skill-tag">Web Dev</span>
+                <span class="skill-tag">Termux CLI</span>
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="card">
-            <h2><i class="fa-solid fa-rocket"></i> Featured Projects</h2>
+        <!-- Learning Roadmap -->
+        <section class="card card-fx">
+            <h2><i class="fa-solid fa-route"></i> Journey & Roadmap</h2>
             
-            <div class="project-card">
-                <h3>📷 Face Recognition Web App</h3>
-                <p>Android (Termux) पर आधारित लाइव कैमरा फेस रिकग्निशन और डेटाबेस सिस्टम।</p>
-                <div class="project-tags">
-                    <small>Flask</small> <small>JS</small> <small>JSON DB</small>
-                </div>
+            <div class="roadmap-item current">
+                <span class="badge">🔥 Current Focus</span>
+                <p>Flask Web Apps, GitHub CI/CD Deployment & Termux Advanced Workflow.</p>
             </div>
 
-            <div class="project-card">
-                <h3>🌐 Live Production Dashboard</h3>
-                <p>Render और GitHub CI/CD से कनेक्टेड ऑटो-डिप्लॉयड वेब एप्लीकेशन।</p>
-                <div class="project-tags">
-                    <small>Python</small> <small>Gunicorn</small> <small>Render</small>
-                </div>
+            <div class="roadmap-item beginner">
+                <span class="badge">⚡ Beginner Level</span>
+                <p>Python Automation, C/C++ Logic, Java Basics, Kali Linux & ML Concepts.</p>
+            </div>
+
+            <div class="roadmap-item future">
+                <span class="badge">🚀 Future Goals</span>
+                <p>Advanced Ethical Hacking, Deep Learning Models & Full-Stack Architecture.</p>
             </div>
         </section>
 
-        <!-- Contact Form -->
-        <section class="card">
+        <!-- Direct Email Contact Form -->
+        <section class="card card-fx">
             <h2><i class="fa-solid fa-paper-plane"></i> Get in Touch</h2>
-            <form id="contactForm">
-                <input type="text" id="senderName" placeholder="आपका नाम" required>
-                <textarea id="senderMsg" rows="3" placeholder="आपका मैसेज..." required></textarea>
-                <button type="submit" id="sendBtn">संदेश भेजें 🚀</button>
+            <p class="form-subtext">Directly sends to: <b>shuklaambikesh45@gmail.com</b></p>
+            
+            <form action="https://formspree.io/f/xanyqpyo" method="POST">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="आपका नाम" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="_replyto" placeholder="आपका ईमेल" required>
+                </div>
+                <div class="input-group">
+                    <textarea name="message" rows="4" placeholder="आपका मैसेज यहाँ लिखें..." required></textarea>
+                </div>
+                <input type="hidden" name="_to" value="shuklaambikesh45@gmail.com">
+                <button type="submit" class="submit-btn">संदेश भेजें 🚀</button>
             </form>
-            <p id="responseMsg" class="hidden-msg"></p>
         </section>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
