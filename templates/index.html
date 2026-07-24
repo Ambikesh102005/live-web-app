@@ -3,20 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Live Web App 🚀</title>
+    <title>My Developer Portfolio 🚀</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="card">
-        <h1>🚀 Ready for Deployment!</h1>
-        <p>यह नया प्रोजेक्ट प्रोडक्शन और ऑटो-डिप्लॉयमेंट के लिए पूरी तरह तैयार है।</p>
-        
-        <div class="status-box">
-            <span>सर्वर स्टेटस:</span>
-            <strong id="serverStatus">चेक हो रहा है...</strong>
-        </div>
 
-        <button id="checkBtn">सर्वर से कनेक्ट करें</button>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="profile-img">👨‍💻</div>
+            <h1>Ambikesh</h1>
+            <p class="subtitle">Full-Stack Web Developer & Tech Explorer</p>
+            <div class="status-badge">🟢 Available for Projects</div>
+        </header>
+
+        <!-- Tech Stack -->
+        <section class="card">
+            <h2><i class="fa-solid fa-code"></i> My Tech Stack</h2>
+            <div class="skills-grid">
+                <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fa-solid fa-flask"></i> Flask</span>
+                <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="card">
+            <h2><i class="fa-solid fa-rocket"></i> Featured Projects</h2>
+            
+            <div class="project-card">
+                <h3>📷 Face Recognition Web App</h3>
+                <p>Android (Termux) पर आधारित लाइव कैमरा फेस रिकग्निशन और डेटाबेस सिस्टम।</p>
+                <div class="project-tags">
+                    <small>Flask</small> <small>JS</small> <small>JSON DB</small>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>🌐 Live Production Dashboard</h3>
+                <p>Render और GitHub CI/CD से कनेक्टेड ऑटो-डिप्लॉयड वेब एप्लीकेशन।</p>
+                <div class="project-tags">
+                    <small>Python</small> <small>Gunicorn</small> <small>Render</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="card">
+            <h2><i class="fa-solid fa-paper-plane"></i> Get in Touch</h2>
+            <form id="contactForm">
+                <input type="text" id="senderName" placeholder="आपका नाम" required>
+                <textarea id="senderMsg" rows="3" placeholder="आपका मैसेज..." required></textarea>
+                <button type="submit" id="sendBtn">संदेश भेजें 🚀</button>
+            </form>
+            <p id="responseMsg" class="hidden-msg"></p>
+        </section>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

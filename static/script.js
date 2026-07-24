@@ -1,14 +1,33 @@
-document.getElementById('checkBtn').addEventListener('click', async () => {
-    const statusText = document.getElementById('serverStatus');
-    statusText.innerText = "कनेक्ट हो रहा है...";
-    
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('senderName').value;
+    const message = document.getElementById('senderMsg').value;
+    const responseMsg = document.getElementById('responseMsg');
+
+    responseMsg.style.color = "#58a6ff";
+    responseMsg.innerText = "भेजा जा रहा है...";
+
     try {
-        const res = await fetch('/api/status');
+        const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, message })
+        });
+
         const data = await res.json();
-        statusText.innerText = data.status;
-        statusText.style.color = "#3fb950";
+
+        if (data.success) {
+            responseMsg.style.color = "#3fb950";
+            responseMsg.innerText = data.message;
+            document.getElementById('senderName').value = '';
+            document.getElementById('senderMsg').value = '';
+        } else {
+            responseMsg.style.color = "#f85149";
+            responseMsg.innerText = data.message;
+        }
     } catch (err) {
-        statusText.innerText = "Offline 🔴";
-        statusText.style.color = "#f85149";
+        responseMsg.style.color = "#f85149";
+        responseMsg.innerText = "सर्वर से कनेक्ट नहीं हो सका!";
     }
 });
