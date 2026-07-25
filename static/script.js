@@ -1,11 +1,11 @@
-// Typewriter Effect
+// Typewriter Effect - Modern ES6 Standard
 const words = ["Web Developer", "Python Explorer", "Kali Linux Learner", "AI Enthusiast"];
 let i = 0;
 let timer;
 
 function typingEffect() {
-    let word = words[i].split("");
-    var loopTyping = function() {
+    const word = words[i].split("");
+    const loopTyping = function() {
         if (word.length > 0) {
             document.getElementById('typewriter').innerHTML += word.shift();
         } else {
@@ -18,8 +18,8 @@ function typingEffect() {
 }
 
 function deletingEffect() {
-    let word = words[i].split("");
-    var loopDeleting = function() {
+    const word = words[i].split("");
+    const loopDeleting = function() {
         if (word.length > 0) {
             word.pop();
             document.getElementById('typewriter').innerHTML = word.join("");
