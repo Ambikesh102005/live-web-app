@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambikesh Shukla | Portfolio & Dashboard</title>
-    <!-- Google Fonts & FontAwesome for Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Ambikesh Shukla | Developer Portfolio</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
-    <!-- Background Glow Elements -->
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
 
     <div class="container">
         
-        <!-- Header / Hero Section -->
-        <header class="hero card glass">
+        <!-- Hero Header -->
+        <header class="card glass">
             <h1>Ambikesh Shukla</h1>
             <p class="subtitle">I am a <span id="typewriter"></span><span class="cursor">|</span></p>
             <div class="social-links">
@@ -28,14 +27,14 @@
             </div>
         </header>
 
-        <!-- About & Contact Info Section -->
+        <!-- About & Contact Section -->
         <section class="card glass">
-            <h2><i class="fa-solid fa-user-shield"></i> About & Contact</h2>
-            <p>Computer Science & Tech Explorer passionate about building high-performance web applications, secure backend systems, and modern UI designs.</p>
+            <h2><i class="fa-solid fa-user-shield"></i> About & Status</h2>
+            <p>Computer Science Explorer passionate about building high-performance web applications, secure backend systems, and modern UI designs.</p>
             <ul class="info-list">
                 <li><strong>📍 Location:</strong> India 🇮🇳</li>
-                <li><strong>💼 Status:</strong> Available for Full-time, Internships & Freelance</li>
-                <li><strong>✉️ Direct Email:</strong> shuklaambikesh45@gmail.com</li>
+                <li><strong>💼 Status:</strong> Available for Internships, Full-time & Freelance</li>
+                <li><strong>✉️ Email:</strong> shuklaambikesh45@gmail.com</li>
             </ul>
         </section>
 
@@ -44,10 +43,9 @@
             <h2><i class="fa-solid fa-laptop-code"></i> Featured Projects</h2>
             <div class="projects-grid">
                 
-                <!-- Project 1 -->
                 <div class="project-item">
                     <h3>🚀 Live Web App Portfolio</h3>
-                    <p>A production-ready personal portfolio built with Flask, Glassmorphism UI, and automated CI/CD pipeline deployed on Render.</p>
+                    <p>Production-ready personal portfolio built with Flask, Glassmorphism UI, and automated CI/CD pipeline on Render.</p>
                     <div class="tech-tags">
                         <span>Flask</span> <span>Python</span> <span>Glassmorphism</span> <span>Render</span>
                     </div>
@@ -57,12 +55,11 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-item">
                     <h3>🍽️ Glob Restaurant App</h3>
-                    <p>An immersive web application featuring 3D elements, modern restaurant menus, and smooth responsive user experience.</p>
+                    <p>An interactive 3D web application featuring custom UI components and smooth transitions.</p>
                     <div class="tech-tags">
-                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>UI/UX</span>
+                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Three.js</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Ambikesh102005" target="_blank"><i class="fa-brands fa-github"></i> Explore Code</a>
@@ -74,10 +71,10 @@
 
         <!-- GitHub Stats Section -->
         <section class="card glass text-center">
-            <h2><i class="fa-solid fa-chart-line"></i> GitHub Engineering Metrics</h2>
+            <h2><i class="fa-solid fa-chart-line"></i> GitHub Engineering Stats</h2>
             <div class="stats-container">
-                <img src="https://github-readme-stats.vercel.app/api?username=Ambikesh102005&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117" alt="GitHub Stats" class="stats-img">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ambikesh102005&layout=compact&theme=radical&hide_border=true&bg_color=0d1117" alt="Top Languages" class="stats-img">
+                <img src="https://github-readme-stats.vercel.app/api?username=Ambikesh102005&show_icons=true&theme=dark&hide_border=true&bg_color=0f172a" alt="GitHub Stats" class="stats-img">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ambikesh102005&layout=compact&theme=dark&hide_border=true&bg_color=0f172a" alt="Top Languages" class="stats-img">
             </div>
         </section>
 
@@ -92,13 +89,12 @@
             </form>
         </section>
 
-        <!-- Footer -->
         <footer>
             <p>© 2026 Ambikesh Shukla. Built with Python Flask & Render.</p>
         </footer>
 
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>
