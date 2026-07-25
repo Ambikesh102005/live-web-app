@@ -1,33 +1,40 @@
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
+// Typewriter Effect
+const words = ["Web Developer", "Python Explorer", "Kali Linux Learner", "AI Enthusiast"];
+let i = 0;
+let timer;
 
-    const name = document.getElementById('senderName').value;
-    const message = document.getElementById('senderMsg').value;
-    const responseMsg = document.getElementById('responseMsg');
-
-    responseMsg.style.color = "#58a6ff";
-    responseMsg.innerText = "भेजा जा रहा है...";
-
-    try {
-        const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, message })
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-            responseMsg.style.color = "#3fb950";
-            responseMsg.innerText = data.message;
-            document.getElementById('senderName').value = '';
-            document.getElementById('senderMsg').value = '';
+function typingEffect() {
+    let word = words[i].split("");
+    var loopTyping = function() {
+        if (word.length > 0) {
+            document.getElementById('typewriter').innerHTML += word.shift();
         } else {
-            responseMsg.style.color = "#f85149";
-            responseMsg.innerText = data.message;
+            setTimeout(deletingEffect, 2000);
+            return false;
         }
-    } catch (err) {
-        responseMsg.style.color = "#f85149";
-        responseMsg.innerText = "सर्वर से कनेक्ट नहीं हो सका!";
-    }
-});
+        timer = setTimeout(loopTyping, 100);
+    };
+    loopTyping();
+}
+
+function deletingEffect() {
+    let word = words[i].split("");
+    var loopDeleting = function() {
+        if (word.length > 0) {
+            word.pop();
+            document.getElementById('typewriter').innerHTML = word.join("");
+        } else {
+            if (words.length > (i + 1)) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout(typingEffect, 500);
+            return false;
+        }
+        timer = setTimeout(loopDeleting, 50);
+    };
+    loopDeleting();
+}
+
+typingEffect();

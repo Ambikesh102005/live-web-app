@@ -3,84 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambikesh Shukla | Portfolio</title>
+    <title>Ambikesh Shukla | Developer Portfolio 🚀</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vanilla Tilt for 3D Cards -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </head>
 <body>
 
-    <div class="glow-bg"></div>
+    <!-- Ambient Glowing Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
     <div class="container">
-        <!-- Hero Header -->
-        <header class="hero card-fx">
+        
+        <!-- Hero Section with Typewriter -->
+        <header class="hero card-fx" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="avatar-icon">
-                <i class="fa-solid fa-terminal"></i>
+                <i class="fa-solid fa-code"></i>
             </div>
             <h1>Ambikesh Shukla</h1>
-            <p class="subtitle">Tech Explorer & Developer</p>
+            <p class="subtitle">I am a <span id="typewriter"></span><span class="cursor">|</span></p>
+            
             <div class="status-badge">
-                <span class="pulse-dot"></span> Available for Projects
+                <span class="pulse-dot"></span> Open to Projects & Collaboration
             </div>
-            <p class="ai-tag"><i class="fa-solid fa-robot"></i> Building & Learning with AI</p>
+            
+            <div class="ai-tag">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> AI-Augmented Developer
+            </div>
         </header>
 
-        <!-- Tech Stack & Skills -->
-        <section class="card card-fx">
-            <h2><i class="fa-solid fa-code"></i> Tech Stack & Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Kali Linux</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">C / C++</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Cyber Security</span>
-                <span class="skill-tag">Web Dev</span>
-                <span class="skill-tag">Termux CLI</span>
+        <!-- Live Terminal Widget -->
+        <section class="card card-fx terminal-card">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">ambikesh@system:~</span>
+            </div>
+            <div class="terminal-body">
+                <p><span class="prompt">$</span> whoami</p>
+                <p class="response">> Ambikesh Shukla | Tech Explorer & Learner</p>
+                <p><span class="prompt">$</span> status</p>
+                <p class="response">> Building cool web applications using Flask & AI tools.</p>
             </div>
         </section>
 
-        <!-- Learning Roadmap -->
-        <section class="card card-fx">
-            <h2><i class="fa-solid fa-route"></i> Journey & Roadmap</h2>
+        <!-- Advanced Tech Stack with Animated Progress -->
+        <section class="card card-fx" data-tilt data-tilt-max="3">
+            <h2><i class="fa-solid fa-layer-group"></i> Tech Matrix & Skills</h2>
             
-            <div class="roadmap-item current">
-                <span class="badge">🔥 Current Focus</span>
-                <p>Flask Web Apps, GitHub CI/CD Deployment & Termux Advanced Workflow.</p>
+            <div class="skill-bar-container">
+                <div class="skill-info"><span>Python & Flask</span><span>Beginner / Intermediate</span></div>
+                <div class="progress-bar"><div class="fill python" style="width: 65%;"></div></div>
+
+                <div class="skill-info"><span>Kali Linux & CyberSec</span><span>Learning</span></div>
+                <div class="progress-bar"><div class="fill linux" style="width: 50%;"></div></div>
+
+                <div class="skill-info"><span>Java / C / C++</span><span>Basics</span></div>
+                <div class="progress-bar"><div class="fill cpp" style="width: 55%;"></div></div>
+
+                <div class="skill-info"><span>HTML5 / CSS3 / JS</span><span>Building UI</span></div>
+                <div class="progress-bar"><div class="fill web" style="width: 70%;"></div></div>
             </div>
 
-            <div class="roadmap-item beginner">
-                <span class="badge">⚡ Beginner Level</span>
-                <p>Python Automation, C/C++ Logic, Java Basics, Kali Linux & ML Concepts.</p>
-            </div>
-
-            <div class="roadmap-item future">
-                <span class="badge">🚀 Future Goals</span>
-                <p>Advanced Ethical Hacking, Deep Learning Models & Full-Stack Architecture.</p>
+            <div class="skills-chips">
+                <span class="chip">Termux CLI</span>
+                <span class="chip">Git / GitHub</span>
+                <span class="chip">Machine Learning</span>
+                <span class="chip">Prompt Eng.</span>
             </div>
         </section>
 
-                <!-- Direct Email Contact Form -->
+        <!-- Futuristic Roadmap -->
         <section class="card card-fx">
-            <h2><i class="fa-solid fa-paper-plane"></i> Get in Touch</h2>
-            <p class="form-subtext">Directly sends to: <b>shuklaambikesh45@gmail.com</b></p>
+            <h2><i class="fa-solid fa-timeline"></i> Dev Roadmap</h2>
             
-            <!-- FormSubmit Service Integration -->
+            <div class="timeline">
+                <div class="timeline-item current">
+                    <div class="marker"></div>
+                    <div class="content">
+                        <h3>🔥 Now</h3>
+                        <p>Flask Modern Web Development, Render Deployments & Terminal Workflows.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item beginner">
+                    <div class="marker"></div>
+                    <div class="content">
+                        <h3>⚡ Core Base</h3>
+                        <p>C/C++ Logical Programming, Java OOPs & Kali Linux System Commands.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item future">
+                    <div class="marker"></div>
+                    <div class="content">
+                        <h3>🚀 Target</h3>
+                        <p>Deep Learning Models, Advanced Ethical Hacking & Scalable Cloud Apps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="card card-fx">
+            <h2><i class="fa-solid fa-paper-plane"></i> Quick Message</h2>
+            <p class="form-subtext">Direct to my inbox: <b>shuklaambikesh45@gmail.com</b></p>
+            
             <form action="https://formsubmit.co/shuklaambikesh45@gmail.com" method="POST">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="आपका नाम" required>
+                    <input type="text" name="name" placeholder="Your Name" required>
                 </div>
                 <div class="input-group">
-                    <input type="email" name="email" placeholder="आपका ईमेल" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
                 </div>
                 <div class="input-group">
-                    <textarea name="message" rows="4" placeholder="आपका मैसेज यहाँ लिखें..." required></textarea>
+                    <textarea name="message" rows="3" placeholder="Write your message here..." required></textarea>
                 </div>
                 
-                <!-- Extra settings for smooth submit -->
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 
-                <button type="submit" class="submit-btn">संदेश भेजें 🚀</button>
+                <button type="submit" class="submit-btn">Send Direct Email 🚀</button>
             </form>
         </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
