@@ -3,114 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambikesh Shukla | Computer Science & AI Explorer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Ambikesh Shukla | Portfolio & Dashboard</title>
+    <!-- Google Fonts & FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <!-- Dynamic Background Particle Network -->
-    <div class="glow-orb orb-primary"></div>
-    <div class="glow-orb orb-secondary"></div>
+    <!-- Background Glow Elements -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
 
     <div class="container">
         
-        <!-- MIT Style Floating Bio Card -->
-        <header class="card hero-card">
-            <div class="profile-header">
-                <div class="avatar-box">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
-                <div class="profile-details">
-                    <h1>Ambikesh Shukla <i class="fa-solid fa-circle-check verified"></i></h1>
-                    <p class="role-text"><span id="typewriter"></span><span class="cursor">|</span></p>
-                    <p class="bio-tagline">Building Intelligent Systems & Scalable Backends using Python, Flask & AI Architectures.</p>
-                </div>
-            </div>
-
-            <!-- Social & Professional Quick Links -->
+        <!-- Header / Hero Section -->
+        <header class="hero card glass">
+            <h1>Ambikesh Shukla</h1>
+            <p class="subtitle">I am a <span id="typewriter"></span><span class="cursor">|</span></p>
             <div class="social-links">
                 <a href="https://github.com/Ambikesh102005" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="mailto:shuklaambikesh45@gmail.com" class="social-btn highlight"><i class="fa-solid fa-envelope"></i> Email Me</a>
+                <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:shuklaambikesh45@gmail.com" class="social-btn"><i class="fa-solid fa-envelope"></i> Email</a>
             </div>
         </header>
 
-        <!-- Dynamic GitHub Stats Card -->
-        <section class="card stats-card">
-            <h2><i class="fa-solid fa-chart-line"></i> GitHub Engineering Activity</h2>
-            <div class="github-stats-wrapper">
-                <img src="https://github-readme-stats.vercel.app/api?username=Ambikesh102005&show_icons=true&theme=cyberpunk&hide_border=true&bg_color=0d1117" alt="GitHub Stats" class="stats-img">
+        <!-- About & Contact Info Section -->
+        <section class="card glass">
+            <h2><i class="fa-solid fa-user-shield"></i> About & Contact</h2>
+            <p>Computer Science & Tech Explorer passionate about building high-performance web applications, secure backend systems, and modern UI designs.</p>
+            <ul class="info-list">
+                <li><strong>📍 Location:</strong> India 🇮🇳</li>
+                <li><strong>💼 Status:</strong> Available for Full-time, Internships & Freelance</li>
+                <li><strong>✉️ Direct Email:</strong> shuklaambikesh45@gmail.com</li>
+            </ul>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section class="card glass">
+            <h2><i class="fa-solid fa-laptop-code"></i> Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-item">
+                    <h3>🚀 Live Web App Portfolio</h3>
+                    <p>A production-ready personal portfolio built with Flask, Glassmorphism UI, and automated CI/CD pipeline deployed on Render.</p>
+                    <div class="tech-tags">
+                        <span>Flask</span> <span>Python</span> <span>Glassmorphism</span> <span>Render</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://my-cool-app-4qhr.onrender.com" target="_blank"><i class="fa-solid fa-globe"></i> Live Demo</a>
+                        <a href="https://github.com/Ambikesh102005/live-web-app" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-item">
+                    <h3>🍽️ Glob Restaurant App</h3>
+                    <p>An immersive web application featuring 3D elements, modern restaurant menus, and smooth responsive user experience.</p>
+                    <div class="tech-tags">
+                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>UI/UX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ambikesh102005" target="_blank"><i class="fa-brands fa-github"></i> Explore Code</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Technical Skill Matrix & Proficiency -->
-        <section class="card">
-            <h2><i class="fa-solid fa-microchip"></i> Core Competencies</h2>
-            <div class="matrix-grid">
-                <div class="matrix-item">
-                    <div class="matrix-head"><span>Python & AI Workflows</span><span class="p-val">85%</span></div>
-                    <div class="bar"><div class="fill" style="width: 85%;"></div></div>
-                </div>
-                <div class="matrix-item">
-                    <div class="matrix-head"><span>Flask & REST APIs</span><span class="p-val">80%</span></div>
-                    <div class="bar"><div class="fill" style="width: 80%;"></div></div>
-                </div>
-                <div class="matrix-item">
-                    <div class="matrix-head"><span>Linux & Systems (Kali/Termux)</span><span class="p-val">75%</span></div>
-                    <div class="bar"><div class="fill" style="width: 75%;"></div></div>
-                </div>
-                <div class="matrix-item">
-                    <div class="matrix-head"><span>C / C++ & Java (Logic)</span><span class="p-val">70%</span></div>
-                    <div class="bar"><div class="fill" style="width: 70%;"></div></div>
-                </div>
+        <!-- GitHub Stats Section -->
+        <section class="card glass text-center">
+            <h2><i class="fa-solid fa-chart-line"></i> GitHub Engineering Metrics</h2>
+            <div class="stats-container">
+                <img src="https://github-readme-stats.vercel.app/api?username=Ambikesh102005&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117" alt="GitHub Stats" class="stats-img">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ambikesh102005&layout=compact&theme=radical&hide_border=true&bg_color=0d1117" alt="Top Languages" class="stats-img">
             </div>
         </section>
 
-        <!-- Featured High-Impact Showcase -->
-        <section class="card">
-            <h2><i class="fa-solid fa-cubes"></i> Systems & Applications</h2>
-            
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>📷 Face Registry & Surveillance System</h3>
-                    <span class="badge live">Active System</span>
-                </div>
-                <p>Real-time face detection & registry engine built natively on mobile Linux environment (Termux) integrated with local database logging.</p>
-                <div class="tech-stack-pills">
-                    <span>Python</span> <span>OpenCV Concept</span> <span>Flask</span> <span>JSON DB</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>⚡ Cloud-Native Production Web App</h3>
-                    <span class="badge live">Deployed</span>
-                </div>
-                <p>Automated CI/CD continuous deployment pipeline routing GitHub main pushes to Render PaaS using Gunicorn production server.</p>
-                <div class="tech-stack-pills">
-                    <span>Gunicorn</span> <span>GitHub Actions</span> <span>Render</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Direct Contact Engine -->
-        <section class="card">
-            <h2><i class="fa-solid fa-paper-plane"></i> Direct Portal</h2>
-            <p class="form-subtext">Messages bypass intermediary databases and route straight to my Gmail inbox.</p>
-            
+        <!-- Contact Form Section -->
+        <section class="card glass">
+            <h2><i class="fa-solid fa-paper-plane"></i> Get in Touch</h2>
             <form action="https://formsubmit.co/shuklaambikesh45@gmail.com" method="POST" class="contact-form">
-                <div class="input-row">
-                    <input type="text" name="name" placeholder="Your Full Name" required>
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                </div>
-                <textarea name="message" rows="4" placeholder="Type your message or project inquiry here..." required></textarea>
-                
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                
-                <button type="submit" class="submit-btn">Transmit Message 🚀</button>
+                <input type="text" name="name" placeholder="Your Name" required maxlength="100">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message..." rows="4" required maxlength="1000"></textarea>
+                <button type="submit" class="submit-btn">Send Message 🚀</button>
             </form>
         </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Ambikesh Shukla. Built with Python Flask & Render.</p>
+        </footer>
+
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
